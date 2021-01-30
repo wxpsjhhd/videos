@@ -1,755 +1,1424 @@
 <!doctype html>
-<html>
+<html lang="zxx">
+
 <head>
-<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
-<title>Dton Videos</title><link href='https://fonts.loli.net/css?family=PT+Serif:400,400italic,700,700italic&subset=latin,cyrillic-ext,cyrillic,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
-.mac-os-11 { --title-bar-height:28px; }
-html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
-body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
-iframe { margin: auto; }
-a.url { word-break: break-all; }
-a:active, a:hover { outline: 0px; }
-.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
-#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
-#write.first-line-indent p { text-indent: 2em; }
-#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
-#write.first-line-indent li { margin-left: 2em; }
-.for-image #write { padding-left: 8px; padding-right: 8px; }
-body.typora-export { padding-left: 30px; padding-right: 30px; }
-.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
-.typora-export .task-list-item input { pointer-events: none; }
-@media screen and (max-width: 500px) {
-  body.typora-export { padding-left: 0px; padding-right: 0px; }
-  #write { padding-left: 20px; padding-right: 20px; }
-  .CodeMirror-sizer { margin-left: 0px !important; }
-  .CodeMirror-gutters { display: none !important; }
-}
-#write li > figure:last-child { margin-bottom: 0.5rem; }
-#write ol, #write ul { position: relative; }
-img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
-button, input, select, textarea { color: inherit; font: inherit; }
-input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
-*, ::after, ::before { box-sizing: border-box; }
-#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
-#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
-p { line-height: inherit; }
-h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
-p { orphans: 4; }
-h1 { font-size: 2rem; }
-h2 { font-size: 1.8rem; }
-h3 { font-size: 1.6rem; }
-h4 { font-size: 1.4rem; }
-h5 { font-size: 1.2rem; }
-h6 { font-size: 1rem; }
-.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
-.hidden { display: none; }
-.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
-a { cursor: pointer; }
-sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
-sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
-#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
-figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
-figure > table { margin: 0px; }
-tr { break-inside: avoid; break-after: auto; }
-thead { display: table-header-group; }
-table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
-table.md-table td { min-width: 32px; }
-.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
-.CodeMirror-linenumber { user-select: none; }
-.CodeMirror { text-align: left; }
-.CodeMirror-placeholder { opacity: 0.3; }
-.CodeMirror pre { padding: 0px 4px; }
-.CodeMirror-lines { padding: 0px; }
-div.hr:focus { cursor: none; }
-#write pre { white-space: pre-wrap; }
-#write.fences-no-line-wrapping pre { white-space: pre; }
-#write pre.ty-contain-cm { white-space: normal; }
-.CodeMirror-gutters { margin-right: 4px; }
-.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
-.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
-#write .md-fences.mock-cm { white-space: pre-wrap; }
-.md-fences.md-fences-with-lineno { padding-left: 0px; }
-#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
-.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
-.CodeMirror-line, twitterwidget { break-inside: avoid; }
-.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
-.footnotes + .footnotes { margin-top: 0px; }
-.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
-li div { padding-top: 0px; }
-blockquote { margin: 1rem 0px; }
-li .mathjax-block, li p { margin: 0.5rem 0px; }
-li blockquote { margin: 1rem 0px; }
-li { margin: 0px; position: relative; }
-blockquote > :last-child { margin-bottom: 0px; }
-blockquote > :first-child, li > :first-child { margin-top: 0px; }
-.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
-#write .footnote-line { white-space: pre-wrap; }
-@media print {
-  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
-  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
-  .typora-export * { -webkit-print-color-adjust: exact; }
-  .typora-export #write { break-after: avoid; }
-  .typora-export #write::after { height: 0px; }
-  .is-mac table { break-inside: avoid; }
-}
-.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
-a img, img a { cursor: pointer; }
-pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
-p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
-#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
-p > .md-image:only-child { display: inline-block; width: 100%; }
-#write .MathJax_Display { margin: 0.8em 0px 0px; }
-.md-math-block { width: 100%; }
-.md-math-block:not(:empty)::after { display: none; }
-.MathJax_ref { fill: currentcolor; }
-[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
-.md-task-list-item { position: relative; list-style-type: none; }
-.task-list-item.md-task-list-item { padding-left: 0px; }
-.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
-.math { font-size: 1rem; }
-.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
-.md-toc-content { position: relative; margin-left: 0px; }
-.md-toc-content::after, .md-toc::after { display: none; }
-.md-toc-item { display: block; color: rgb(65, 131, 196); }
-.md-toc-item a { text-decoration: none; }
-.md-toc-inner:hover { text-decoration: underline; }
-.md-toc-inner { display: inline-block; cursor: pointer; }
-.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
-.md-toc-h2 .md-toc-inner { margin-left: 2em; }
-.md-toc-h3 .md-toc-inner { margin-left: 4em; }
-.md-toc-h4 .md-toc-inner { margin-left: 6em; }
-.md-toc-h5 .md-toc-inner { margin-left: 8em; }
-.md-toc-h6 .md-toc-inner { margin-left: 10em; }
-@media screen and (max-width: 48em) {
-  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
-  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
-  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
-  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
-}
-a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
-.footnote-line a:not(.reversefootnote) { color: inherit; }
-.md-attr { display: none; }
-.md-fn-count::after { content: "."; }
-code, pre, samp, tt { font-family: var(--monospace); }
-kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
-.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
-code { text-align: left; vertical-align: initial; }
-a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
-.md-inline-math .MathJax_SVG .noError { display: none !important; }
-.html-for-mac .inline-math-svg .MathJax_SVG { vertical-align: 0.2px; }
-.md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: hidden; display: block !important; }
-.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
-.MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
-.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
-.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
-.MathJax_SVG * { transition: none 0s ease 0s; }
-.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
-.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
-.md-diagram-panel > svg { max-width: 100%; }
-[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
-[lang="mermaid"] .node text { font-size: 1rem; }
-table tr th { border-bottom: 0px; }
-video { max-width: 100%; display: block; margin: 0px auto; }
-iframe { max-width: 100%; width: 100%; border: none; }
-.highlight td, .highlight tr { border: 0px; }
-mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
-.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
-mark .md-meta { color: rgb(0, 0, 0); opacity: 0.3 !important; }
-@media print {
-  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
-}
-.md-diagram-panel .messageText { stroke: none !important; }
-.md-diagram-panel .start-state { fill: var(--node-fill); }
-.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
-.md-require-zoom-fix foreignobject { font-size: var(--mermaid-font-zoom); }
-
-
-/* meyer reset -- http://meyerweb.com/eric/tools/css/reset/ , v2.0 | 20110126 | License: none (public domain) */
-
-@include-when-export url(https://fonts.loli.net/css?family=PT+Serif:400,400italic,700,700italic&subset=latin,cyrillic-ext,cyrillic,latin-ext);
-
-/* =========== */
-
-/* pt-serif-regular - latin */
-/* pt-serif-italic - latin */
-/* pt-serif-700 - latin */
-/* pt-serif-700italic - latin */
-:root {
-	--active-file-bg-color: #dadada;
-	--active-file-bg-color: rgba(32, 43, 51, 0.63);
-	--active-file-text-color: white;
-	--bg-color: #f3f2ee;
-	--text-color: #1f0909;
-	--control-text-color: #444;
-	--rawblock-edit-panel-bd: #e5e5e5;
-
-	--select-text-bg-color: rgba(32, 43, 51, 0.63);
-  --select-text-font-color: white;
-}
-
-pre {
-	--select-text-bg-color: #36284e;
-	--select-text-font-color: #fff;
-}
-
-html {
-	font-size: 16px;
-}
-
-html, body {
-	background-color: #f3f2ee;
-	font-family: "PT Serif", 'Times New Roman', Times, serif;
-	color: #1f0909;
-	line-height: 1.5em;
-}
-
-/*#write {
-	overflow-x: auto;
-    max-width: initial;
-	padding-left: calc(50% - 17em);
-    padding-right: calc(50% - 17em);
-}
-
-@media (max-width: 36em) {
- 	#write {
- 		padding-left: 1em;
-    	padding-right: 1em;
- 	}
-}*/
-
-#write {
-	max-width: 40em;
-}
-
-@media only screen and (min-width: 1400px) {
-	#write {
-			max-width: 914px;
-	}
-}
-
-ol li {
-	list-style-type: decimal;
-	list-style-position: outside;
-}
-ul li {
-	list-style-type: disc;
-	list-style-position: outside;
-}
-
-ol,
-ul {
-	list-style: none;
-}
-
-blockquote,
-q {
-	quotes: none;
-}
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-/* styles */
-
-/* ====== */
-
-/* headings */
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	font-weight: bold;
-}
-h1 {
-	font-size: 1.875em;
-	/*30 / 16*/
-	line-height: 1.6em;
-	/* 48 / 30*/
-	margin-top: 2em;
-}
-h2,
-h3 {
-	font-size: 1.3125em;
-	/*21 / 16*/
-	line-height: 1.15;
-	/*24 / 21*/
-	margin-top: 2.285714em;
-	/*48 / 21*/
-	margin-bottom: 1.15em;
-	/*24 / 21*/
-}
-h3 {
-	font-weight: normal;
-}
-h4 {
-	font-size: 1.125em;
-	/*18 / 16*/
-	margin-top: 2.67em;
-	/*48 / 18*/
-}
-h5,
-h6 {
-	font-size: 1em;
-	/*16*/
-}
-h1 {
-	border-bottom: 1px solid;
-	margin-bottom: 1.875em;
-	padding-bottom: 0.8125em;
-}
-/* links */
-
-a {
-	text-decoration: none;
-	color: #065588;
-}
-a:hover,
-a:active {
-	text-decoration: underline;
-}
-/* block spacing */
-
-p,
-blockquote,
-.md-fences {
-	margin-bottom: 1.5em;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	margin-bottom: 1.5em;
-}
-/* blockquote */
-
-blockquote {
-	font-style: italic;
-	border-left: 5px solid;
-	margin-left: 2em;
-	padding-left: 1em;
-}
-/* lists */
-
-ul,
-ol {
-	margin: 0 0 1.5em 1.5em;
-}
-/* tables */
-.md-meta,.md-before, .md-after {
-	color:#999;
-}
-
-table {
-	margin-bottom: 1.5em;
-	/*24 / 16*/
-	font-size: 1em;
-	/* width: 100%; */
-}
-thead th,
-tfoot th {
-	padding: .25em .25em .25em .4em;
-	text-transform: uppercase;
-}
-th {
-	text-align: left;
-}
-td {
-	vertical-align: top;
-	padding: .25em .25em .25em .4em;
-}
-
-code,
-.md-fences {
-	background-color: #dadada;
-}
-
-code {
-	padding-left: 2px;
-	padding-right: 2px;
-}
-
-.md-fences {
-	margin-left: 2em;
-	margin-bottom: 3em;
-	padding-left: 1ch;
-	padding-right: 1ch;
-}
-
-pre,
-code,
-tt {
-	font-size: .875em;
-	line-height: 1.714285em;
-}
-/* some fixes */
-
-h1 {
-	line-height: 1.3em;
-	font-weight: normal;
-	margin-bottom: 0.5em;
-}
-
-p + ul,
-p + ol{
-	margin-top: .5em;
-}
-
-h3 + ul,
-h4 + ul,
-h5 + ul,
-h6 + ul,
-h3 + ol,
-h4 + ol,
-h5 + ol,
-h6 + ol {
-	margin-top: .5em;
-}
-
-li > ul,
-li > ol {
-	margin-top: inherit;
-	margin-bottom: 0;
-}
-
-li ol>li {
-	list-style-type: lower-alpha;
-}
-
-li li ol>li{
-	list-style-type: lower-roman;
-}
-
-h2,
-h3 {
-	margin-bottom: .75em;
-}
-hr {
-	border-top: none;
-	border-right: none;
-	border-bottom: 1px solid;
-	border-left: none;
-}
-h1 {
-	border-color: #c5c5c5;
-}
-blockquote {
-	border-color: #bababa;
-	color: #656565;
-}
-
-blockquote ul,
-blockquote ol {
-	margin-left:0;
-}
-
-.ty-table-edit {
-	background-color: transparent;
-}
-thead {
-	background-color: #dadada;
-}
-tr:nth-child(even) {
-	background: #e8e7e7;
-}
-hr {
-	border-color: #c5c5c5;
-}
-.task-list{
-	padding-left: 1rem;
-}
-
-.md-task-list-item {
-	padding-left: 1.5rem;
-	list-style-type: none;
-}
-
-.md-task-list-item > input:before {
-	content: '\221A';
-	display: inline-block;
-	width: 1.25rem;
-  	height: 1.6rem;
-	vertical-align: middle;
-	text-align: center;
-	color: #ddd;
-	background-color: #F3F2EE;
-}
-
-.md-task-list-item > input:checked:before,
-.md-task-list-item > input[checked]:before{
-	color: inherit;
-}
-
-#write pre.md-meta-block {
-	min-height: 1.875rem;
-	color: #555;
-	border: 0px;
-	background: transparent;
-	margin-top: -4px;
-	margin-left: 1em;
-	margin-top: 1em;
-}
-
-.md-image>.md-meta {
-	color: #9B5146;
-}
-
-.md-image>.md-meta{
-	font-family: Menlo, 'Ubuntu Mono', Consolas, 'Courier New', 'Microsoft Yahei', 'Hiragino Sans GB', 'WenQuanYi Micro Hei', serif;
-}
-
-
-#write>h3.md-focus:before{
-	left: -1.5rem;
-	color:#999;
-	border-color:#999;
-}
-#write>h4.md-focus:before{
-	left: -1.5rem;
-	top: .25rem;
-	color:#999;
-	border-color:#999;
-}
-#write>h5.md-focus:before{
-	left: -1.5rem;
-	top: .0.3125rem;
-	color:#999;
-	border-color:#999;
-}
-#write>h6.md-focus:before{
-	left: -1.5rem;
-	top: 0.3125rem;
-	color:#999;
-	border-color:#999;
-}
-
-.md-toc:focus .md-toc-content{
-	margin-top: 19px;
-}
-
-.md-toc-content:empty:before{
-	color: #065588;
-}
-.md-toc-item {
-	color: #065588;
-}
-#write div.md-toc-tooltip {
-	background-color: #f3f2ee;
-}
-
-#typora-sidebar {
-	background-color: #f3f2ee;
-	-webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.375);
-  	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.375);
-}
-
-.pin-outline #typora-sidebar {
-	background: inherit;
-	box-shadow: none;
-	border-right: 1px dashed;
-}
-
-.pin-outline #typora-sidebar:hover .outline-title-wrapper {
-	border-left:1px dashed;
-}
-
-.outline-item:hover {
-  background-color: #dadada;
-  border-left: 28px solid #dadada;
-  border-right: 18px solid #dadada;
-}
-
-.typora-node .outline-item:hover {
-  	border-right: 28px solid #dadada;
-}
-
-.outline-expander:before {
-  content: "\f0da";
-  font-family: FontAwesome;
-  font-size:14px;
-  top: 1px;
-}
-
-.outline-expander:hover:before,
-.outline-item-open>.outline-item>.outline-expander:before {
-  content: "\f0d7";
-}
-
-.modal-content {
-	background-color: #f3f2ee;
-}
-
-.auto-suggest-container ul li {
-	list-style-type: none;
-}
-
-/** UI for electron */
-
-.megamenu-menu,
-#top-titlebar, #top-titlebar *,
-.megamenu-content {
-	background: #f3f2ee;
-	color: #1f0909;
-}
-
-.megamenu-menu-header {
-	border-bottom: 1px dashed #202B33;
-}
-
-.megamenu-menu {
-	box-shadow: none;
-	border-right: 1px dashed;
-}
-
-header, .context-menu, .megamenu-content, footer {
-	font-family: "PT Serif", 'Times New Roman', Times, serif;
-    color: #1f0909;
-}
-
-#megamenu-back-btn {
-	color: #1f0909;
-	border-color: #1f0909;
-}
-
-.megamenu-menu-header #megamenu-menu-header-title:before {
-	color: #1f0909;
-}
-
-.megamenu-menu-list li a:hover, .megamenu-menu-list li a.active {
-	color: inherit;
-	background-color: #e8e7df;
-}
-
-.long-btn:hover {
-	background-color: #e8e7df;
-}
-
-#recent-file-panel tbody tr:nth-child(2n-1) {
-    background-color: transparent !important;
-}
-
-.megamenu-menu-panel tbody tr:hover td:nth-child(2) {
-    color: inherit;
-}
-
-.megamenu-menu-panel .btn {
-	background-color: #D2D1D1;
-}
-
-.btn-default {
-	background-color: transparent;
-}
-
-.typora-sourceview-on #toggle-sourceview-btn,
-.ty-show-word-count #footer-word-count {
-	background: #c7c5c5;
-}
-
-#typora-quick-open {
-    background-color: inherit;
-}
-
-.md-diagram-panel {
-	margin-top: 8px;
-}
-
-.file-list-item-file-name {
-	font-weight: initial;
-}
-
-.file-list-item-summary {
-	opacity: 1;
-}
-
-.file-list-item {
-	color: #777;
-}
-
-.file-list-item.active {
-	background-color: inherit;
-	color: black;
-}
-
-.ty-side-sort-btn.active {
-	background-color: inherit;
-}
-
-.file-list-item.active .file-list-item-file-name  {
-	font-weight: bold;
-}
-
-.file-list-item{
-    opacity:1 !important;
-}
-
-.file-library-node.active>.file-node-background{
-	background-color: rgba(32, 43, 51, 0.63);
-	background-color: var(--active-file-bg-color);
-}
-
-.file-tree-node.active>.file-node-content{
-	color: white;
-	color: var(--active-file-text-color);
-}
-
-.md-task-list-item>input {
-	margin-left: -1.7em;
-	margin-top: calc(1rem - 12px);
-}
-
-input {
-	border: 1px solid #aaa;
-}
-
-.megamenu-menu-header #megamenu-menu-header-title,
-.megamenu-menu-header:hover, 
-.megamenu-menu-header:focus {
-	color: inherit;
-}
-
-.dropdown-menu .divider {
-	border-color: #e5e5e5;
-}
-
-/* https://github.com/typora/typora-issues/issues/2046 */
-.os-windows-7 strong,
-.os-windows-7 strong  {
-	font-weight: 760;
-}
-
-.ty-preferences .btn-default {
-	background: transparent;
-}
-
-.ty-preferences .window-header {
-	border-bottom: 1px dashed #202B33;
-	box-shadow: none;
-}
-
-#sidebar-loading-template, #sidebar-loading-template.file-list-item {
-	color: #777;
-}
-
-.searchpanel-search-option-btn.active {
-	background: #777;
-	color: white;
-}
-
- :root {--mermaid-font-zoom:1.25em ;} 
-</style>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Dton Videos</title>
+	<!-- Template CSS -->
+	<link rel="stylesheet" href="assets/css/style-starter.css">
+	<!-- Template CSS -->
+	<link href="//fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,600&display=swap"
+		rel="stylesheet">
+	<!-- Template CSS -->
 </head>
-<body class='typora-export os-windows'>
-<div id='write'  class=''><h1><a name="dton-videos" class="md-header-anchor"></a><span>Dton Videos</span></h1><p><a href='/_data/终极笔记.html'><span>终极笔记</span></a></p><p><a href='/_data/奔跑吧黄河篇.html'><span>奔跑吧黄河篇</span></a></p><p><a href='/_data/中国飞侠.html'><span>中国飞侠</span></a></p><p><a href='/_data/吞噬星空.html'><span>吞噬星空</span></a></p><p><a href='/_data/斗罗大陆.html'><span>斗罗大陆</span></a></p><p>&nbsp;</p></div>
+
+<body>
+
+	<!-- header -->
+	<header id="site-header" class="w3l-header fixed-top">
+		<!--/nav-->
+		<nav class="navbar navbar-expand-lg navbar-light fill px-lg-0 py-0 px-3">
+			<div class="container">
+				<h1><a class="navbar-brand" href="index.html"><span class="fa fa-play icon-log"
+							aria-hidden="true"></span>
+						Dton Videos</a></h1><!--网站左侧logo旁的字-->
+				<!-- if logo is image enable this   
+						<a class="navbar-brand" href="#index.html">
+							<img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
+						</a> -->
+				<button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
+					data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+					aria-label="Toggle navigation">
+					<!-- <span class="navbar-toggler-icon"></span> -->
+					<span class="fa icon-expand fa-bars"></span>
+					<span class="fa icon-close fa-times"></span>
+				</button>
+
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item active">
+							<a class="nav-link" href="index.html">主页</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="about.html">关于</a>
+						</li>
+				<li class="nav-item">
+								<a class="nav-link" href="genre.html">分类</a>
+							</li>
+
+						<li class="nav-item">
+							<a class="nav-link" href="contact.html">联系</a>
+						</li>
+					</ul>
+
+					<!--/search-right-->
+					<!--/search-right-->
+					<div class="search-right">
+						<a href="#search" class="btn search-hny mr-lg-3 mt-lg-0 mt-4" title="search">搜索<span
+								class="fa fa-search ml-3" aria-hidden="true"></span></a>
+						<!-- search popup -->
+						<div id="search" class="pop-overlay">
+							<div class="popup">
+								<form action="#" method="post" class="search-box">
+									<input type="search" placeholder="Search your Keyword" name="search"
+										required="required" autofocus="">
+									<button type="submit" class="btn"><span class="fa fa-search"
+											aria-hidden="true"></span></button>
+								</form>
+								<div class="browse-items">
+									<h3 class="hny-title two mt-md-5 mt-4">Browse all:</h3>
+									<ul class="search-items">
+										<li><a href="genre.html">Action</a></li>
+										<li><a href="genre.html">Drama</a></li>
+										<li><a href="genre.html">Family</a></li>
+										<li><a href="genre.html">Thriller</a></li>
+										<li><a href="genre.html">Commedy</a></li>
+										<li><a href="genre.html">Romantic</a></li>
+										<li><a href="genre.html">Tv-Series</a></li>
+										<li><a href="genre.html">Horror</a></li>
+										<li><a href="genre.html">Action</a></li>
+										<li><a href="genre.html">Drama</a></li>
+										<li><a href="genre.html">Family</a></li>
+										<li><a href="genre.html">Thriller</a></li>
+										<li><a href="genre.html">Commedy</a></li>
+										<li><a href="genre.html">Romantic</a></li>
+										<li><a href="genre.html">Tv-Series</a></li>
+										<li><a href="genre.html">Horror</a></li>
+									</ul>
+								</div>
+							</div>
+							<a class="close" href="#close">×</a>
+						</div>
+						<!-- /search popup -->
+						<!--/search-right-->
+					</div>
+
+
+				</div>
+				<!-- toggle switch for light and dark theme -->
+				<div class="mobile-position">
+					<nav class="navigation">
+						<div class="theme-switch-wrapper">
+							<label class="theme-switch" for="checkbox">
+								<input type="checkbox" id="checkbox">
+								<div class="mode-container">
+									<i class="gg-sun"></i>
+									<i class="gg-moon"></i>
+								</div>
+							</label>
+						</div>
+					</nav>
+				</div>
+				<!-- //toggle switch for light and dark theme -->
+			</div>
+		</nav>
+		<!--//nav-->
+	</header>
+	<!-- //header -->
+	<!-- main-slider -->
+	<section class="w3l-main-slider position-relative" id="home">
+		<div class="companies20-content">
+			<div class="owl-one owl-carousel owl-theme">
+				<div class="item">
+					<li>
+						<div class="slider-info banner-view bg bg2">
+							<div class="banner-info">
+								<h3>中国飞侠</h3>
+								<a href="#small-dialog1" class="popup-with-zoom-anim play-view1">
+									<span class="video-play-icon">
+										<span class="fa fa-play"></span>
+									</span>
+									<h6>点击观看</h6>
+								</a>
+								<!-- dialog itself, mfp-hide class is required to make dialog hidden -->
+								<div id="small-dialog1" class="zoom-anim-dialog mfp-hide">
+									<iframe src="https://www.administratorw.com/video.php?url=https%3A%2F%2Fwww.iqiyi.com%2Fv_lt8z8y4ysk.html" allow="autoplay; fullscreen"
+										allowfullscreen=""></iframe>
+								</div>
+							</div>
+						</div>
+					</li>
+				</div>
+				<div class="item">
+					<li>
+						<div class="slider-info  banner-view banner-top1 bg bg2">
+							<div class="banner-info">
+								<h3>Latest Online Movies</h3>
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.<span class="over-para"> Consequuntur hic odio
+									voluptatem tenetur consequatur.</span></p>
+								<a href="#small-dialog2" class="popup-with-zoom-anim play-view1">
+									<span class="video-play-icon">
+										<span class="fa fa-play"></span>
+									</span>
+									<h6>Watch Trailer</h6>
+								</a>
+								<!-- dialog itself, mfp-hide class is required to make dialog hidden -->
+								<div id="small-dialog2" class="zoom-anim-dialog mfp-hide">
+									<iframe src="https://player.vimeo.com/video/395376850" allow="autoplay; fullscreen"
+										allowfullscreen=""></iframe>
+								</div>
+							</div>
+						</div>
+					</li>
+				</div>
+				<div class="item">
+					<li>
+						<div class="slider-info banner-view banner-top2 bg bg2">
+							<div class="banner-info">
+								<h3>Latest Movie Trailers</h3>
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.<span class="over-para"> Consequuntur hic odio
+									voluptatem tenetur consequatur.</span></p>
+								<a href="#small-dialog3" class="popup-with-zoom-anim play-view1">
+									<span class="video-play-icon">
+										<span class="fa fa-play"></span>
+									</span>
+									<h6>Watch Trailer</h6>
+								</a>
+								<!-- dialog itself, mfp-hide class is required to make dialog hidden -->
+								<div id="small-dialog3" class="zoom-anim-dialog mfp-hide">
+									<iframe src="https://player.vimeo.com/video/389969665" allow="autoplay; fullscreen"
+										allowfullscreen=""></iframe>
+								</div>
+							</div>
+						</div>
+					</li>
+				</div>
+				<div class="item">
+					<li>
+						<div class="slider-info banner-view banner-top3 bg bg2">
+							<div class="banner-info">
+								<h3>Latest Online Movies</h3>
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.<span class="over-para"> Consequuntur hic odio
+									voluptatem tenetur consequatur.</span></p>
+								<a href="#small-dialog4" class="popup-with-zoom-anim play-view1">
+									<span class="video-play-icon">
+										<span class="fa fa-play"></span>
+									</span>
+									<h6>Watch Trailer</h6>
+								</a>
+								<!-- dialog itself, mfp-hide class is required to make dialog hidden -->
+								<div id="small-dialog4" class="zoom-anim-dialog mfp-hide">
+									<iframe src="https://player.vimeo.com/video/323491174" allow="autoplay; fullscreen"
+										allowfullscreen=""></iframe>
+								</div>
+							</div>
+						</div>
+					</li>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- //banner-slider-->
+	<!-- main-slider -->
+	<!--grids-sec1-->
+	<section class="w3l-grids">
+		<div class="grids-main py-5">
+			<div class="container py-lg-3">
+				<div class="headerhny-title">
+					<div class="w3l-title-grids">
+						<div class="headerhny-left">
+							<h3 class="hny-title">Popular Movies</h3>
+						</div>
+						<div class="headerhny-right text-lg-right">
+							<h4><a class="show-title" href="genre.html">Show all</a></h4>
+						</div>
+					</div>
+				</div>
+				<div class="w3l-populohny-grids">
+					<div class="item vhny-grid">
+						<div class="box16">
+							<a href="genre.html">
+								<figure>
+									<img class="img-fluid" src="assets/images/m7.jpg" alt="">
+								</figure>
+								<div class="box-content">
+									<h3 class="title">Frozen 2</h3>
+									<h4> <span class="post"><span class="fa fa-clock-o"> </span> 1 Hr 4min
+
+										</span>
+
+										<span class="post fa fa-heart text-right"></span>
+									</h4>
+								</div>
+								<span class="fa fa-play video-icon" aria-hidden="true"></span>
+							</a>
+						</div>
+					</div>
+					<div class="item vhny-grid">
+						<div class="box16">
+							<a href="genre.html">
+								<figure>
+									<img class="img-fluid" src="assets/images/m3.jpg" alt="">
+								</figure>
+								<div class="box-content">
+									<h3 class="title">Knives Out</h3>
+									<h4> <span class="post"><span class="fa fa-clock-o"> </span> 1 Hr 4min
+
+										</span>
+
+										<span class="post fa fa-heart text-right"></span>
+									</h4>
+								</div>
+								<span class="fa fa-play video-icon" aria-hidden="true"></span>
+							</a>
+						</div>
+					</div>
+					<div class="item vhny-grid">
+						<div class="box16">
+							<a href="genre.html">
+								<figure>
+									<img class="img-fluid" src="assets/images/m4.jpg" alt="">
+								</figure>
+								<div class="box-content">
+									<h3 class="title">Little Women</h3>
+									<h4> <span class="post"><span class="fa fa-clock-o"> </span> 1 Hr 4min
+
+										</span>
+
+										<span class="post fa fa-heart text-right"></span>
+									</h4>
+								</div>
+								<span class="fa fa-play video-icon" aria-hidden="true"></span>
+							</a>
+						</div>
+					</div>
+					<div class="item vhny-grid">
+						<div class="box16">
+							<a href="genre.html">
+								<figure>
+									<img class="img-fluid" src="assets/images/m5.jpg" alt="">
+								</figure>
+								<div class="box-content">
+									<h3 class="title">Jumanji</h3>
+									<h4> <span class="post"><span class="fa fa-clock-o"> </span> 1 Hr 4min
+
+										</span>
+
+										<span class="post fa fa-heart text-right"></span>
+									</h4>
+								</div>
+								<span class="fa fa-play video-icon" aria-hidden="true"></span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--//grids-sec1-->
+	<!--grids-sec2-->
+	<section class="w3l-grids">
+		<div class="grids-main py-5">
+			<div class="container py-lg-3">
+				<div class="headerhny-title">
+					<div class="w3l-title-grids">
+						<div class="headerhny-left">
+							<h3 class="hny-title">New Releases</h3>
+						</div>
+						<div class="headerhny-right text-lg-right">
+							<h4><a class="show-title" href="genre.html">Show all</a></h4>
+						</div>
+					</div>
+				</div>
+				<div class="owl-three owl-carousel owl-theme">
+					<div class="item vhny-grid">
+						<div class="box16 mb-0">
+							<a href="genre.html">
+								<figure>
+									<img class="img-fluid" src="assets/images/n1.jpg" alt="">
+								</figure>
+								<div class="box-content">
+									<h4> <span class="post"><span class="fa fa-clock-o"> </span> 2 Hr 4min
+
+										</span>
+
+										<span class="post fa fa-heart text-right"></span>
+									</h4>
+								</div>
+								<span class="fa fa-play video-icon" aria-hidden="true"></span>
+							</a>
+						</div>
+						<h3> <a class="title-gd" href="genre.html">No Time to Die</a></h3>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+						<div class="button-center text-center mt-4">
+							<a href="genre.html" class="btn watch-button">Watch now</a>
+						</div>
+
+					</div>
+					<div class="item vhny-grid">
+						<div class="box16 mb-0">
+							<a href="genre.html">
+								<figure>
+									<img class="img-fluid" src="assets/images/n2.jpg" alt="">
+								</figure>
+								<div class="box-content">
+
+									<h4> <span class="post"><span class="fa fa-clock-o"> </span> 2 Hr 4min
+
+										</span>
+
+										<span class="post fa fa-heart text-right"></span>
+									</h4>
+								</div>
+								<span class="fa fa-play video-icon" aria-hidden="true"></span>
+							</a>
+						</div>
+						<h3> <a class="title-gd" href="genre.html">Mulan</a></h3>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+						<div class="button-center text-center mt-4">
+							<a href="genre.html" class="btn watch-button">Watch now</a>
+						</div>
+					</div>
+					<div class="item vhny-grid">
+						<div class="box16 mb-0">
+							<a href="genre.html">
+								<figure>
+									<img class="img-fluid" src="assets/images/n3.jpg" alt="">
+								</figure>
+								<div class="box-content">
+
+									<h4> <span class="post"><span class="fa fa-clock-o"> </span> 2 Hr 4min
+
+										</span>
+
+										<span class="post fa fa-heart text-right"></span>
+									</h4>
+								</div>
+								<span class="fa fa-play video-icon" aria-hidden="true"></span>
+							</a>
+						</div>
+						<h3> <a class="title-gd" href="genre.html">Free Guy</a></h3>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+						<div class="button-center text-center mt-4">
+							<a href="genre.html" class="btn watch-button">Watch now</a>
+						</div>
+					</div>
+					<div class="item vhny-grid">
+						<div class="box16 mb-0">
+							<a href="genre.html">
+								<figure>
+									<img class="img-fluid" src="assets/images/n4.jpg" alt="">
+								</figure>
+								<div class="box-content">
+
+									<h4> <span class="post"><span class="fa fa-clock-o"> </span> 2 Hr 4min
+
+										</span>
+
+										<span class="post fa fa-heart text-right"></span>
+									</h4>
+								</div>
+								<span class="fa fa-play video-icon" aria-hidden="true"></span>
+							</a>
+						</div>
+						<h3> <a class="title-gd" href="genre.html">My Spy</a></h3>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+						<div class="button-center text-center mt-4">
+							<a href="genre.html" class="btn watch-button">Watch now</a>
+						</div>
+
+					</div>
+					<div class="item vhny-grid">
+						<div class="box16 mb-0">
+							<a href="genre.html">
+								<figure>
+									<img class="img-fluid" src="assets/images/n5.jpg" alt="">
+								</figure>
+								<div class="box-content">
+
+									<h4> <span class="post"><span class="fa fa-clock-o"> </span> 2 Hr 4min
+
+										</span>
+
+										<span class="post fa fa-heart text-right"></span>
+									</h4>
+								</div>
+								<span class="fa fa-play video-icon" aria-hidden="true"></span>
+							</a>
+						</div>
+						<h3> <a class="title-gd" href="genre.html">Scoob</a></h3>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+						<div class="button-center text-center mt-4">
+							<a href="genre.html" class="btn watch-button">Watch now</a>
+						</div>
+					</div>
+					<div class="item vhny-grid">
+						<div class="box16 mb-0">
+							<a href="genre.html">
+								<figure>
+									<img class="img-fluid" src="assets/images/n6.jpg" alt="">
+								</figure>
+								<div class="box-content">
+
+									<h4> <span class="post"><span class="fa fa-clock-o"> </span> 2 Hr 4min
+
+										</span>
+
+										<span class="post fa fa-heart text-right"></span>
+									</h4>
+								</div>
+								<span class="fa fa-play video-icon" aria-hidden="true"></span>
+							</a>
+						</div>
+						<h3> <a class="title-gd" href="genre.html">Downhill</a></h3>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+						<div class="button-center text-center mt-4">
+							<a href="genre.html" class="btn watch-button">Watch now</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</section>
+	<!--grids-sec2-->
+	<!--mid-slider -->
+	<section class="w3l-mid-slider position-relative">
+		<div class="companies20-content">
+			<div class="owl-mid owl-carousel owl-theme">
+				<div class="item">
+					<li>
+						<div class="slider-info mid-view bg bg2">
+							<div class="container">
+								<div class="mid-info">
+									<span class="sub-text">Comedy</span>
+									<h3>Jumanji: The Next Level</h3>
+									<p>2019 ‧ Comedy/Action ‧ 2h 3m</p>
+									<a class="watch" href="genre.html"><span class="fa fa-play"
+											aria-hidden="true"></span>
+										Watch Trailer</a>
+								</div>
+							</div>
+						</div>
+					</li>
+				</div>
+				<div class="item">
+					<li>
+						<div class="slider-info mid-view mid-top1 bg bg2">
+							<div class="container">
+								<div class="mid-info">
+									<span class="sub-text">Adventure</span>
+									<h3>Dolittle</h3>
+									<p>2020 ‧ Family/Adventure ‧ 1h 41m</p>
+									<a class="watch" href="genre.html"><span class="fa fa-play"
+											aria-hidden="true"></span>
+										Watch Trailer</a>
+								</div>
+							</div>
+						</div>
+					</li>
+				</div>
+				<div class="item">
+					<li>
+						<div class="slider-info mid-view mid-top2 bg bg2">
+							<div class="container">
+								<div class="mid-info">
+									<span class="sub-text">Action</span>
+									<h3>Bad Boys for Life</h3>
+									<p>2020 ‧ Comedy/Action ‧ 2h 4m</p>
+									<a class="watch" href="genre.html"><span class="fa fa-play"
+											aria-hidden="true"></span>
+										Watch Trailer</a>
+								</div>
+							</div>
+						</div>
+					</li>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- //mid-slider-->
+	<!--/tabs-->
+	<section class="w3l-albums py-5" id="projects">
+		<div class="container py-lg-4">
+			<div class="row">
+				<div class="col-lg-12 mx-auto">
+					<!--Horizontal Tab-->
+					<div id="parentHorizontalTab">
+						<ul class="resp-tabs-list hor_1">
+							<li>Recent Movies</li>
+							<li>Popular Movies</li>
+							<li>Trend Movies</li>
+							<div class="clear"></div>
+						</ul>
+						<div class="resp-tabs-container hor_1">
+							<div class="albums-content">
+								<div class="row">
+									<!--/set1-->
+									<div class="col-lg-4 new-relise-gd mt-lg-0 mt-0">
+										<div class="slider-info">
+											<div class="img-circle">
+												<a href="genre.html">
+
+													<img src="assets/images/m6.jpg" class="img-fluid"
+														alt="author image">
+													<div class="overlay-icon">
+
+														<span class="fa fa-play video-icon" aria-hidden="true"></span>
+													</div>
+												</a>
+											</div>
+											<div class="message">
+												<p>English</p>
+												<a class="author-book-title" href="genre.html">Long Shot</a>
+												<h4> <span class="post"><span class="fa fa-clock-o"> </span> 2 Hr 4min
+
+													</span>
+
+													<span class="post fa fa-heart text-right"></span>
+												</h4>
+											</div>
+										</div>
+
+									</div>
+									<div class="col-lg-4 new-relise-gd mt-lg-0 mt-0">
+										<div class="slider-info">
+											<div class="img-circle">
+												<a href="genre.html"><img src="assets/images/m5.jpg" class="img-fluid"
+														alt="author image">
+													<div class="overlay-icon">
+
+														<span class="fa fa-play video-icon" aria-hidden="true"></span>
+													</div>
+												</a>
+											</div>
+											<div class="message">
+												<p>English</p>
+												<a class="author-book-title" href="genre.html">Jumanji</a>
+												<h4> <span class="post"><span class="fa fa-clock-o"> </span> 2 Hr 4min
+
+													</span>
+
+													<span class="post fa fa-heart text-right"></span>
+												</h4>
+											</div>
+										</div>
+
+									</div>
+									<div class="col-lg-4 new-relise-gd mt-lg-0 mt-0">
+										<div class="slider-info">
+											<div class="img-circle">
+												<a href="genre.html"><img src="assets/images/m4.jpg" class="img-fluid"
+														alt="author image">
+													<div class="overlay-icon">
+
+														<span class="fa fa-play video-icon" aria-hidden="true"></span>
+													</div>
+												</a>
+											</div>
+											<div class="message">
+												<p>English</p>
+												<a class="author-book-title" href="genre.html">Little Women</a>
+												<h4> <span class="post"><span class="fa fa-clock-o"> </span> 2 Hr 4min
+
+													</span>
+
+													<span class="post fa fa-heart text-right"></span>
+												</h4>
+											</div>
+										</div>
+
+									</div>
+									<!--//set1-->
+									<!--/set1-->
+									<div class="col-lg-4 new-relise-gd mt-lg-0 mt-0">
+										<div class="slider-info">
+											<div class="img-circle">
+												<a href="genre.html"><img src="assets/images/m1.jpg" class="img-fluid"
+														alt="author image">
+													<div class="overlay-icon">
+
+														<span class="fa fa-play video-icon" aria-hidden="true"></span>
+													</div>
+												</a>
+											</div>
+											<div class="message">
+												<p>English</p>
+												<a class="author-book-title" href="genre.html">Rocketman</a>
+												<h4> <span class="post"><span class="fa fa-clock-o"> </span> 2 Hr 4min
+
+													</span>
+
+													<span class="post fa fa-heart text-right"></span>
+												</h4>
+											</div>
+										</div>
+
+									</div>
+									<div class="col-lg-4 new-relise-gd mt-lg-0 mt-0">
+										<div class="slider-info">
+											<div class="img-circle">
+												<a href="genre.html"><img src="assets/images/m2.jpg" class="img-fluid"
+														alt="author image">
+													<div class="overlay-icon">
+
+														<span class="fa fa-play video-icon" aria-hidden="true"></span>
+													</div>
+												</a>
+											</div>
+											<div class="message">
+												<p>English</p>
+												<a class="author-book-title" href="genre.html">Doctor Sleep</a>
+												<h4> <span class="post"><span class="fa fa-clock-o"> </span> 2 Hr 4min
+
+													</span>
+
+													<span class="post fa fa-heart text-right"></span>
+												</h4>
+											</div>
+										</div>
+
+									</div>
+									<div class="col-lg-4 new-relise-gd mt-lg-0 mt-0">
+										<div class="slider-info">
+											<div class="img-circle">
+												<a href="genre.html"><img src="assets/images/m3.jpg" class="img-fluid"
+														alt="author image">
+													<div class="overlay-icon">
+
+														<span class="fa fa-play video-icon" aria-hidden="true"></span>
+													</div>
+												</a>
+											</div>
+											<div class="message">
+												<p>English</p>
+												<a class="author-book-title" href="genre.html">Knives Out</a>
+												<h4> <span class="post"><span class="fa fa-clock-o"> </span> 2 Hr 4min
+
+													</span>
+
+													<span class="post fa fa-heart text-right"></span>
+												</h4>
+											</div>
+										</div>
+
+									</div>
+									<!--//set1-->
+									<!--/set1-->
+									<div class="col-lg-4 new-relise-gd mt-lg-0 mt-0">
+										<div class="slider-info">
+											<div class="img-circle">
+												<a href="genre.html"><img src="assets/images/n1.jpg" class="img-fluid"
+														alt="author image">
+													<span class="fa fa-play video-icon" aria-hidden="true"></span>
+												</a>
+											</div>
+											<div class="message">
+												<p>English</p>
+												<a class="author-book-title" href="genre.html">No Time to Die</a>
+												<h4> <span class="post"><span class="fa fa-clock-o"> </span> 2 Hr 4min
+
+													</span>
+
+													<span class="post fa fa-heart text-right"></span>
+												</h4>
+											</div>
+										</div>
+
+									</div>
+									<div class="col-lg-4 new-relise-gd mt-lg-0 mt-0">
+										<div class="slider-info">
+											<div class="img-circle">
+												<a href="genre.html"><img src="assets/images/n2.jpg" class="img-fluid"
+														alt="author image">
+													<div class="overlay-icon">
+
+														<span class="fa fa-play video-icon" aria-hidden="true"></span>
+													</div>
+												</a>
+											</div>
+											<div class="message">
+												<p>English</p>
+												<a class="author-book-title" href="genre.html">Mulan</a>
+												<h4> <span class="post"><span class="fa fa-clock-o"> </span> 2 Hr 4min
+
+													</span>
+
+													<span class="post fa fa-heart text-right"></span>
+												</h4>
+											</div>
+										</div>
+
+									</div>
+									<div class="col-lg-4 new-relise-gd mt-lg-0 mt-0">
+										<div class="slider-info">
+											<div class="img-circle">
+												<a href="genre.html"><img src="assets/images/n3.jpg" class="img-fluid"
+														alt="author image">
+													<div class="overlay-icon">
+
+														<span class="fa fa-play video-icon" aria-hidden="true"></span>
+													</div>
+												</a>
+											</div>
+											<div class="message">
+												<p>English</p>
+												<a class="author-book-title" href="genre.html">Free Guy</a>
+												<h4> <span class="post"><span class="fa fa-clock-o"> </span> 2 Hr 4min
+
+													</span>
+
+													<span class="post fa fa-heart text-right"></span>
+												</h4>
+											</div>
+										</div>
+
+									</div>
+									<!--//set1-->
+								</div>
+							</div>
+							<div class="albums-content">
+								<div class="row">
+									<!--/set1-->
+									<div class="col-lg-4 new-relise-gd mt-lg-0 mt-0">
+										<div class="slider-info">
+											<div class="img-circle">
+												<a href="genre.html"><img src="assets/images/m1.jpg" class="img-fluid"
+														alt="author image">
+													<div class="overlay-icon">
+
+														<span class="fa fa-play video-icon" aria-hidden="true"></span>
+													</div>
+												</a>
+											</div>
+											<div class="message">
+												<p>English</p>
+												<a class="author-book-title" href="genre.html">Rocketman</a>
+												<h4> <span class="post"><span class="fa fa-clock-o"> </span> 2 Hr 4min
+
+													</span>
+
+													<span class="post fa fa-heart text-right"></span>
+												</h4>
+											</div>
+										</div>
+
+									</div>
+									<div class="col-lg-4 new-relise-gd mt-lg-0 mt-0">
+										<div class="slider-info">
+											<div class="img-circle">
+												<a href="genre.html"><img src="assets/images/m2.jpg" class="img-fluid"
+														alt="author image">
+													<div class="overlay-icon">
+
+														<span class="fa fa-play video-icon" aria-hidden="true"></span>
+													</div>
+												</a>
+											</div>
+											<div class="message">
+												<p>English</p>
+												<a class="author-book-title" href="genre.html">Doctor Sleep</a>
+												<h4> <span class="post"><span class="fa fa-clock-o"> </span> 2 Hr 4min
+
+													</span>
+
+													<span class="post fa fa-heart text-right"></span>
+												</h4>
+											</div>
+										</div>
+
+									</div>
+									<div class="col-lg-4 new-relise-gd mt-lg-0 mt-0">
+										<div class="slider-info">
+											<div class="img-circle">
+												<a href="genre.html"><img src="assets/images/m3.jpg" class="img-fluid"
+														alt="author image">
+													<div class="overlay-icon">
+
+														<span class="fa fa-play video-icon" aria-hidden="true"></span>
+													</div>
+												</a>
+											</div>
+											<div class="message">
+												<p>English</p>
+												<a class="author-book-title" href="genre.html">Knives Out</a>
+												<h4> <span class="post"><span class="fa fa-clock-o"> </span> 2 Hr 4min
+
+													</span>
+
+													<span class="post fa fa-heart text-right"></span>
+												</h4>
+											</div>
+										</div>
+
+									</div>
+									<!--//set1-->
+									<!--/set2-->
+									<div class="col-lg-4 new-relise-gd mt-lg-0 mt-0">
+										<div class="slider-info">
+											<div class="img-circle">
+												<a href="genre.html"><img src="assets/images/m7.jpg" class="img-fluid"
+														alt="author image">
+													<div class="overlay-icon">
+
+														<span class="fa fa-play video-icon" aria-hidden="true"></span>
+													</div>
+												</a>
+											</div>
+											<div class="message">
+												<p>English</p>
+												<a class="author-book-title" href="genre.html">Frozen 2</a>
+												<h4> <span class="post"><span class="fa fa-clock-o"> </span> 2 Hr 4min
+
+													</span>
+
+													<span class="post fa fa-heart text-right"></span>
+												</h4>
+											</div>
+										</div>
+
+									</div>
+									<div class="col-lg-4 new-relise-gd mt-lg-0 mt-0">
+										<div class="slider-info">
+											<div class="img-circle">
+												<a href="genre.html"><img src="assets/images/m8.jpg" class="img-fluid"
+														alt="author image">
+													<div class="overlay-icon">
+
+														<span class="fa fa-play video-icon" aria-hidden="true"></span>
+													</div>
+												</a>
+											</div>
+											<div class="message">
+												<p>English</p>
+												<a class="author-book-title" href="genre.html">Toy Story 4</a>
+												<h4> <span class="post"><span class="fa fa-clock-o"> </span> 2 Hr 4min
+
+													</span>
+
+													<span class="post fa fa-heart text-right"></span>
+												</h4>
+											</div>
+										</div>
+
+									</div>
+									<div class="col-lg-4 new-relise-gd mt-lg-0 mt-0">
+										<div class="slider-info">
+											<div class="img-circle">
+												<a href="genre.html"><img src="assets/images/m9.jpg" class="img-fluid"
+														alt="author image">
+													<div class="overlay-icon">
+
+														<span class="fa fa-play video-icon" aria-hidden="true"></span>
+													</div>
+												</a>
+											</div>
+											<div class="message">
+												<p>English</p>
+												<a class="author-book-title" href="genre.html">Joker</a>
+												<h4> <span class="post"><span class="fa fa-clock-o"> </span> 2 Hr 4min
+
+													</span>
+
+													<span class="post fa fa-heart text-right"></span>
+												</h4>
+											</div>
+										</div>
+
+									</div>
+									<!--//set2-->
+								</div>
+							</div>
+							<div class="albums-content">
+								<div class="row">
+									<!--/set3-->
+									<div class="col-lg-4 new-relise-gd mt-lg-0 mt-0">
+										<div class="slider-info">
+											<div class="img-circle">
+												<a href="genre.html"><img src="assets/images/m7.jpg" class="img-fluid"
+														alt="author image">
+													<div class="overlay-icon">
+
+														<span class="fa fa-play video-icon" aria-hidden="true"></span>
+													</div>
+												</a>
+											</div>
+											<div class="message">
+												<p>English</p>
+												<a class="author-book-title" href="genre.html">Frozen 2</a>
+												<h4> <span class="post"><span class="fa fa-clock-o"> </span> 2 Hr 4min
+
+													</span>
+
+													<span class="post fa fa-heart text-right"></span>
+												</h4>
+											</div>
+										</div>
+
+									</div>
+									<div class="col-lg-4 new-relise-gd mt-lg-0 mt-0">
+										<div class="slider-info">
+											<div class="img-circle">
+												<a href="genre.html"><img src="assets/images/m8.jpg" class="img-fluid"
+														alt="author image">
+													<div class="overlay-icon">
+
+														<span class="fa fa-play video-icon" aria-hidden="true"></span>
+													</div>
+												</a>
+											</div>
+											<div class="message">
+												<p>English</p>
+												<a class="author-book-title" href="genre.html">Toy Story 4</a>
+												<h4> <span class="post"><span class="fa fa-clock-o"> </span> 2 Hr 4min
+
+													</span>
+
+													<span class="post fa fa-heart text-right"></span>
+												</h4>
+											</div>
+										</div>
+
+									</div>
+									<div class="col-lg-4 new-relise-gd mt-lg-0 mt-0">
+										<div class="slider-info">
+											<div class="img-circle">
+												<a href="genre.html"><img src="assets/images/m9.jpg" class="img-fluid"
+														alt="author image">
+													<div class="overlay-icon">
+
+														<span class="fa fa-play video-icon" aria-hidden="true"></span>
+													</div>
+												</a>
+											</div>
+											<div class="message">
+												<p>English</p>
+												<a class="author-book-title" href="genre.html">Joker</a>
+												<h4> <span class="post"><span class="fa fa-clock-o"> </span> 2 Hr 4min
+
+													</span>
+
+													<span class="post fa fa-heart text-right"></span>
+												</h4>
+											</div>
+										</div>
+
+									</div>
+									<!--//set3-->
+									<!--/set3-->
+									<div class="col-lg-4 new-relise-gd mt-lg-0 mt-0">
+										<div class="slider-info">
+											<div class="img-circle">
+												<a href="genre.html"><img src="assets/images/m10.jpg" class="img-fluid"
+														alt="author image">
+													<div class="overlay-icon">
+
+														<span class="fa fa-play video-icon" aria-hidden="true"></span>
+													</div>
+												</a>
+											</div>
+											<div class="message">
+												<p>English</p>
+												<a class="author-book-title" href="genre.html">Alita</a>
+												<h4> <span class="post"><span class="fa fa-clock-o"> </span> 2 Hr 4min
+
+													</span>
+
+													<span class="post fa fa-heart text-right"></span>
+												</h4>
+											</div>
+										</div>
+
+									</div>
+									<div class="col-lg-4 new-relise-gd mt-lg-0 mt-0">
+										<div class="slider-info">
+											<div class="img-circle">
+												<a href="genre.html"><img src="assets/images/m11.jpg" class="img-fluid"
+														alt="author image">
+													<div class="overlay-icon">
+
+														<span class="fa fa-play video-icon" aria-hidden="true"></span>
+													</div>
+												</a>
+											</div>
+											<div class="message">
+												<p>English</p>
+												<a class="author-book-title" href="genre.html">The Lego</a>
+												<h4> <span class="post"><span class="fa fa-clock-o"> </span> 2 Hr 4min
+
+													</span>
+
+													<span class="post fa fa-heart text-right"></span>
+												</h4>
+											</div>
+										</div>
+
+									</div>
+									<div class="col-lg-4 new-relise-gd mt-lg-0 mt-0">
+										<div class="slider-info">
+											<div class="img-circle">
+												<a href="genre.html"><img src="assets/images/m12.jpg" class="img-fluid"
+														alt="author image">
+													<div class="overlay-icon">
+
+														<span class="fa fa-play video-icon" aria-hidden="true"></span>
+													</div>
+												</a>
+											</div>
+											<div class="message">
+												<p>English</p>
+												<a class="author-book-title" href="genre.html">The Hustle</a>
+												<h4> <span class="post"><span class="fa fa-clock-o"> </span> 2 Hr 4min
+
+													</span>
+
+													<span class="post fa fa-heart text-right"></span>
+												</h4>
+											</div>
+										</div>
+
+									</div>
+									<!--//set3-->
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- //tabs-->
+	<!-- footer-66 -->
+	<footer class="w3l-footer">
+		<section class="footer-inner-main">
+			<div class="footer-hny-grids py-5">
+				<div class="container py-lg-4">
+					<div class="text-txt">
+						<div class="right-side">
+							<div class="row footer-about">
+								<div class="col-md-3 col-6 footer-img mb-lg-0 mb-4">
+									<a href="genre.html"><img class="img-fluid" src="assets/images/banner1.jpg"
+											alt=""></a>
+								</div>
+								<div class="col-md-3 col-6 footer-img mb-lg-0 mb-4">
+									<a href="genre.html"><img class="img-fluid" src="assets/images/banner2.jpg"
+											alt=""></a>
+								</div>
+								<div class="col-md-3 col-6 footer-img mb-lg-0 mb-4">
+									<a href="genre.html"><img class="img-fluid" src="assets/images/banner3.jpg"
+											alt=""></a>
+								</div>
+								<div class="col-md-3 col-6 footer-img mb-lg-0 mb-4">
+									<a href="genre.html"><img class="img-fluid" src="assets/images/banner4.jpg"
+											alt=""></a>
+								</div>
+							</div>
+							<div class="row footer-links">
+
+
+								<div class="col-md-3 col-sm-6 sub-two-right mt-5">
+									<h6>Movies</h6>
+									<ul>
+										<li><a href="#">Movies</a></li>
+										<li><a href="#">Videos</a></li>
+										<li><a href="#">English Movies</a></li>
+										<li><a href="#">Tailor</a></li>
+										<li><a href="#">Upcoming Movies</a></li>
+										<li><a href="contact.html">Contact Us</a></li>
+									</ul>
+								</div>
+								<div class="col-md-3 col-sm-6 sub-two-right mt-5">
+									<h6>Information</h6>
+									<ul>
+										<li><a href="index.html">Home</a> </li>
+										<li><a href="about.html">About</a> </li>
+										<li><a href="#">Tv Series</a> </li>
+										<li><a href="#">Blogs</a> </li>
+										<li><a href="#">Login</a></li>
+										<li><a href="contact.html">Contact</a></li>
+									</ul>
+								</div>
+								<div class="col-md-3 col-sm-6 sub-two-right mt-5">
+									<h6>Locations</h6>
+									<ul>
+										<li><a href="genre.html">Asia</a></li>
+										<li><a href="genre.html">France</a></li>
+										<li><a href="genre.html">Taiwan</a></li>
+										<li><a href="genre.html">United States</a></li>
+										<li><a href="genre.html">Korea</a></li>
+										<li><a href="genre.html">United Kingdom</a></li>
+									</ul>
+								</div>
+								<div class="col-md-3 col-sm-6 sub-two-right mt-5">
+									<h6>Newsletter</h6>
+									<form action="#" class="subscribe mb-3" method="post">
+										<input type="email" name="email" placeholder="Your Email Address" required="">
+										<button><span class="fa fa-envelope-o"></span></button>
+									</form>
+									<p>Enter your email and receive the latest news, updates and special offers from us.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			</div>
+			<div class="below-section">
+				<div class="container">
+					<div class="copyright-footer">
+						<div class="columns text-lg-left">
+							<p>&copy; 2020 ProShowz. All rights reserved | Designed by <a
+									href="https://w3layouts.com">W3layouts</a></p>
+						</div>
+
+						<ul class="social text-lg-right">
+							<li><a href="#facebook"><span class="fa fa-facebook" aria-hidden="true"></span></a>
+							</li>
+							<li><a href="#linkedin"><span class="fa fa-linkedin" aria-hidden="true"></span></a>
+							</li>
+							<li><a href="#twitter"><span class="fa fa-twitter" aria-hidden="true"></span></a>
+							</li>
+							<li><a href="#google"><span class="fa fa-google-plus" aria-hidden="true"></span></a>
+							</li>
+
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- copyright -->
+			<!-- move top -->
+			<button onclick="topFunction()" id="movetop" title="Go to top">
+				<span class="fa fa-arrow-up" aria-hidden="true"></span>
+			</button>
+			<script>
+				// When the user scrolls down 20px from the top of the document, show the button
+				window.onscroll = function () {
+					scrollFunction()
+				};
+
+				function scrollFunction() {
+					if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+						document.getElementById("movetop").style.display = "block";
+					} else {
+						document.getElementById("movetop").style.display = "none";
+					}
+				}
+
+				// When the user clicks on the button, scroll to the top of the document
+				function topFunction() {
+					document.body.scrollTop = 0;
+					document.documentElement.scrollTop = 0;
+				}
+			</script>
+			<!-- /move top -->
+
+		</section>
+	</footer>
+	<!--//footer-66 -->
 </body>
+
 </html>
+<!-- responsive tabs -->
+<script src="assets/js/jquery-1.9.1.min.js"></script>
+  <script src="assets/js/easyResponsiveTabs.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      //Horizontal Tab
+      $('#parentHorizontalTab').easyResponsiveTabs({
+        type: 'default', //Types: default, vertical, accordion
+        width: 'auto', //auto or any width like 600px
+        fit: true, // 100% fit in a container
+        tabidentify: 'hor_1', // The tab groups identifier
+        activate: function (event) { // Callback function if tab is switched
+          var $tab = $(this);
+          var $info = $('#nested-tabInfo');
+          var $name = $('span', $info);
+          $name.text($tab.text());
+          $info.show();
+        }
+      });
+    });
+  </script>  
+<!-- //responsive tabs -->
+<!--/theme-change-->
+<script src="assets/js/theme-change.js"></script>
+<!-- //theme-change-->
+<script src="assets/js/owl.carousel.js"></script>
+<!-- script for banner slider-->
+<script>
+	$(document).ready(function () {
+		$('.owl-one').owlCarousel({
+			stagePadding:280,
+			loop: true,
+			margin: 20,
+			nav: true,
+			responsiveClass: true,
+			autoplay: true,
+			autoplayTimeout: 5000,
+			autoplaySpeed: 1000,
+			autoplayHoverPause: false,
+			responsive: {
+				0: {
+					items: 1,
+					stagePadding:40,
+					nav: false
+				},
+				480: {
+					items: 1,
+					stagePadding:60,
+					nav: true
+				},
+				667: {
+					items: 1,
+					stagePadding:80,
+					nav: true
+				},
+				1000: {
+					items: 1,
+					nav: true
+				}
+			}
+		})
+	})
+</script>
+<!-- //script -->
+<script>
+	$(document).ready(function () {
+		$('.owl-three').owlCarousel({
+			loop: true,
+			margin: 20,
+			nav: false,
+			responsiveClass: true,
+			autoplay: true,
+			autoplayTimeout: 5000,
+			autoplaySpeed: 1000,
+			autoplayHoverPause: false,
+			responsive: {
+				0: {
+					items: 2,
+					nav: false
+				},
+				480: {
+					items: 2,
+					nav: true
+				},
+				667: {
+					items: 3,
+					nav: true
+				},
+				1000: {
+					items: 5,
+					nav: true
+				}
+			}
+		})
+	})
+</script>
+<!-- //script -->
+<!-- /mid-script -->
+<script>
+	$(document).ready(function () {
+		$('.owl-mid').owlCarousel({
+			loop: true,
+			margin: 0,
+			nav: false,
+			responsiveClass: true,
+			autoplay: true,
+			autoplayTimeout: 5000,
+			autoplaySpeed: 1000,
+			autoplayHoverPause: false,
+			responsive: {
+				0: {
+					items: 1,
+					nav: false
+				},
+				480: {
+					items: 1,
+					nav: false
+				},
+				667: {
+					items: 1,
+					nav: true
+				},
+				1000: {
+					items: 1,
+					nav: true
+				}
+			}
+		})
+	})
+</script>
+<!-- //mid-script -->
+
+<!-- script for owlcarousel -->
+<!-- Template JavaScript -->
+<script src="assets/js/jquery.magnific-popup.min.js"></script>
+<script>
+	$(document).ready(function () {
+		$('.popup-with-zoom-anim').magnificPopup({
+			type: 'inline',
+
+			fixedContentPos: false,
+			fixedBgPos: true,
+
+			overflowY: 'auto',
+
+			closeBtnInside: true,
+			preloader: false,
+
+			midClick: true,
+			removalDelay: 300,
+			mainClass: 'my-mfp-zoom-in'
+		});
+
+		$('.popup-with-move-anim').magnificPopup({
+			type: 'inline',
+
+			fixedContentPos: false,
+			fixedBgPos: true,
+
+			overflowY: 'auto',
+
+			closeBtnInside: true,
+			preloader: false,
+
+			midClick: true,
+			removalDelay: 300,
+			mainClass: 'my-mfp-slide-bottom'
+		});
+	});
+</script>
+<!--//-->
+<!-- disable body scroll which navbar is in active -->
+<script>
+	$(function () {
+		$('.navbar-toggler').click(function () {
+			$('body').toggleClass('noscroll');
+		})
+	});
+</script>
+<!-- disable body scroll which navbar is in active -->
+
+<!--/MENU-JS-->
+<script>
+	$(window).on("scroll", function () {
+		var scroll = $(window).scrollTop();
+
+		if (scroll >= 80) {
+			$("#site-header").addClass("nav-fixed");
+		} else {
+			$("#site-header").removeClass("nav-fixed");
+		}
+	});
+
+	//Main navigation Active Class Add Remove
+	$(".navbar-toggler").on("click", function () {
+		$("header").toggleClass("active");
+	});
+	$(document).on("ready", function () {
+		if ($(window).width() > 991) {
+			$("header").removeClass("active");
+		}
+		$(window).on("resize", function () {
+			if ($(window).width() > 991) {
+				$("header").removeClass("active");
+			}
+		});
+	});
+</script>
+<!--//MENU-JS-->
+
+<script src="assets/js/bootstrap.min.js"></script>
